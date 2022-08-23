@@ -1,8 +1,10 @@
 package com.can.durumcu.service.abstracts;
 
-import com.can.durumcu.core.results.DataResult;
 import com.can.durumcu.core.results.Result;
+import com.can.durumcu.core.results.SuccessDataResult;
 import com.can.durumcu.entity.Ingredient;
+
+import java.util.List;
 
 public interface IIngredientService {
     Result add(Ingredient ingredient);
@@ -11,5 +13,5 @@ public interface IIngredientService {
 
     Result delete(Long id);
 
-    DataResult<Ingredient> getByName(String name);
+    SuccessDataResult<List<Ingredient>> getByName(String name);
 }
